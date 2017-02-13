@@ -1,4 +1,4 @@
-[![Github Releases (by Asset)](https://img.shields.io/github/downloads/atom/atom/latest/atom-amd64.deb.svg?style=plastic)]()
+[![Github Releases (by Asset)](https://img.shields.io/github/downloads/atom/atom/latest/PHP.svg?style=plastic)]()
 # ApiRestClient
 
 **ApiRestClient is a simple Lib to talk with API Rest.**
