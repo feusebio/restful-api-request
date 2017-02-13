@@ -1,0 +1,8 @@
+{
+    "name": "feusebio/RESTful-API-Request",
+    "description": "ApiRestClient is a simple Lib to talk with API Rest",
+    "require": {
+        "php": "^5.3.3",
+        "nategood/httpful": "0.2.20"
+    }
+}
