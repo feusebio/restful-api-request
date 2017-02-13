@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>API Custo Justo</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="js/controller.js"></script>
+
+        <!-- PROCESS FORM WITH AJAX (OLD) -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-md-6 col-md-offset-3">
+                <!-- PAGE TITLE -->
+                <div class="page-header">
+                    <h1>
+                        <img src="img/custojusto.png" style="width: 215px;">
+                        <span class="glyphicon glyphicon-flash"></span> Operações API</h1>
+                </div>
+                <!--TABS-->
+                <div> <!-- container -->
+                    <!-- Nav tabs -->
+                    <div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#tab-lista" aria-controls="home" role="tab" data-toggle="tab">Lista Valores</a></li>
+                            <li role="presentation"><a href="#tab-anuncio" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-eye-open"></span> Anúncio</a></li>
+                            <li role="presentation"><a href="#tab-add-anuncio" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-plus"></span> Anúncio</a></li>
+                            <li role="presentation"><a href="#tab-imagem" aria-controls="messages" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-picture"></span> Imagens</a></li>
+                            <li role="presentation"><a href="#tab-eliminar" aria-controls="messages" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-minus"></span> Eliminar</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="tab-lista">
+                                <div class="alert alert-info" role="alert">Listar valores usando qualquer Prefixo URL (Método GET)</div>
+                                <form id="frm-lista">
+                                <!-- SHOW ERROR/SUCCESS MESSAGES -->
+                                <div id="lista-messages"></div>
+                                <!-- NAME -->
+                                <div id="name-group" class="form-group">
+                                    <label>Prefixo URL: [regions]</label>
+                                    <input type="text" name="url" class="form-control" placeholder="Prefixo URL" value="regions">
+                                    <span class="help-block">categories/1020</span>
+                                </div>
+
+                                <!-- SUBMIT BUTTON -->
+                                <button  id="get-dados" type="submit" class="btn btn-success btn-lg btn-block">
+                                    <span class="glyphicon glyphicon-flash"></span> Obter Lista
+                                </button>
+                                </form>
+                            </div>
+                            
+                            <!--VER ANUNCIO-->
+                            <div role="tabpanel" class="tab-pane" id="tab-anuncio">
+                                <div class="alert alert-info" role="alert">Pesquisar anúncio pelo ID devolvido ao criar</div>
+                                <form id="frm-anuncio">
+                                <!-- SHOW ERROR/SUCCESS MESSAGES -->
+                                <div id="anuncio-messages"></div>
+                                <!-- NAME -->
+                                <div id="name-group" class="form-group">
+                                    <label>Prefixo URL: [entries/12495697]</label>
+                                    <input type="text" name="anuncio-url" class="form-control" placeholder="Prefixo URL" value="entries/12495697">
+                                    <span class="help-block"></span>
+                                </div>
+                                <!-- SUBMIT BUTTON -->
+                                <button id="ver-anuncio" type="submit" class="btn btn-info btn-lg btn-block">
+                                    <span class="glyphicon glyphicon-eye-open"></span> Ver Anúncio
+                                </button>
+                                </form>
+                            </div>
+                            
+                            <!--ADICIONAR ANUNCIO-->
+                            <div role="tabpanel" class="tab-pane" id="tab-add-anuncio">
+                                <div class="alert alert-info" role="alert">Criar anúncio guardar ID devolvido, é necessário para alterações</div>
+                                <form id="frm-add-anuncio">
+                                <!-- SHOW ERROR/SUCCESS MESSAGES -->
+                                <div id="add-anuncio-messages"></div>
+                                <!-- NAME -->
+                                <div id="name-group" class="form-group">
+                                    <label>Prefixo URL: [entries]</label>
+                                    <input type="text" name="add-anuncio-url" class="form-control" placeholder="Prefixo URL" value="entries">
+                                    <span class="help-block"></span>
+                                    <input type="text" name="partner-info-ad-id" class="form-control" placeholder="Partner_Info Ad_Id">
+                                    <span class="help-block">Partner_Info - Ad_Id, Ex: 13 (Se já existir, dá erro. Devolve mensagem de duplicação)</span>
+                                </div>
+                                <!-- SUBMIT BUTTON -->
+                                <button id="add-anuncio" type="submit" class="btn btn-info btn-lg btn-block">
+                                    <span class="glyphicon glyphicon-plus"></span> Adicionar Anúncio
+                                </button>
+                                </form>
+                            </div>
+                            
+                            <div role="tabpanel" class="tab-pane" id="tab-imagem">
+                                <form id="frm-imagem">
+                                <!-- SHOW ERROR/SUCCESS MESSAGES -->
+                                <div id="imagem-messages"></div>
+                                <!-- NAME -->
+                                <div id="name-group" class="form-group">
+                                    <label>Prefixo URL: [images] | Ver aqui: https://static-qa.custojusto.pt/...</label>
+                                    <input type="text" name="imagem-url" class="form-control" placeholder="Prefixo URL" value="images">
+                                    <span class="help-block"></span>
+                                </div>
+                                <!-- SUBMIT BUTTON -->
+                                <button id="adicionar-imagem" type="submit" class="btn btn-warning btn-lg btn-block">
+                                    <span class="glyphicon glyphicon-plus"></span> Adicionar
+                                </button>
+                                </form>
+                            </div>
+                            
+                            <div role="tabpanel" class="tab-pane" id="tab-eliminar">
+                                <div class="alert alert-info" role="alert">Eliminar entradas (Método DELETE)</div>
+                                <form id="frm-eliminar">
+                                <!-- SHOW ERROR/SUCCESS MESSAGES -->
+                                <div id="eliminar-messages"></div>
+                                <!-- NAME -->
+                                <div id="name-group" class="form-group">
+                                    <label>Prefixo URL: [entries/11803508]</label>
+                                    <input type="text" name="url" class="form-control" placeholder="Prefixo URL">
+                                    <span class="help-block"></span>
+                                </div>
+                                <!-- SUBMIT BUTTON -->
+                                <button id="eliminar-anuncio" type="submit" class="btn btn-danger btn-lg btn-block">
+                                    <span class="glyphicon glyphicon-minus"></span> Eliminar
+                                </button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div> <!-- end col -->
+        </div>
+    </body>
+</html>
