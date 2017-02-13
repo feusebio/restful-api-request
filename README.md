@@ -1,6 +1,7 @@
 # ApiRestClient
 
 **ApiRestClient is a simple Lib to talk with API Rest.**
+
 This project was created to communicate with API CustoJusto.pt, by security reasons some data was omited.
 The user is free to use and make changes to communicate with other API.
 
