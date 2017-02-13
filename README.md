@@ -1,6 +1,8 @@
 # ApiRestClient
 
-ApiRestClient is a simple Lib to talk with API Rest.
+**ApiRestClient is a simple Lib to talk with API Rest.**
+This project was created to communicate with API CustoJusto.pt, by security reasons some data was omited.
+The user is free to use and make changes to communicate with other API.
 
   - Use Httpful Rest Client Lib (http://phphttpclient.com/)
   - Use most popular HTTP methods (GET/POST/UPDATE/DELETE)
@@ -8,7 +10,7 @@ ApiRestClient is a simple Lib to talk with API Rest.
 
 Examples with CURL:
 
-curl -i -X POST "https://api.,,,,/v0/entries" -H "Authorization: Token token=XxxXXxxXxXXX" -H "Content-Type: application/json" -d '
+curl -i -X POST "https://api......./v0/entries" -H "Authorization: Token token=XxxXXxxXxXXX" -H "Content-Type: application/json" -d '
 {
     "title": "Escritório com 250m2 no Marquês",
     "description": "Fabuloso escritório com 250m2 no centro de Lisboa com ótimos acessos...",
