@@ -1,4 +1,4 @@
-[![PHP](https://img.shields.io/pypi/phpversions/PHP.svg?style=plastic)]()
+[![DEV Version](https://poser.pugx.org/phpunit/phpunit/version)](https://packagist.org/packages/phpunit/phpunit)
 [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?style=plastic)]()
 # ApiRestClient
 
