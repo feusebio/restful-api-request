@@ -1,3 +1,6 @@
+[![Latest Stable Version](https://poser.pugx.org/feusebio/restful-api-request/v/stable)](https://packagist.org/packages/feusebio/restful-api-request)
+[![Latest Unstable Version](https://poser.pugx.org/feusebio/restful-api-request/v/unstable)](https://packagist.org/packages/feusebio/restful-api-request)
+[![Total Downloads](https://poser.pugx.org/feusebio/restful-api-request/downloads)](https://packagist.org/packages/feusebio/restful-api-request)
 # ApiRestClient
 
 **ApiRestClient is a simple Lib to talk with API Rest.**
