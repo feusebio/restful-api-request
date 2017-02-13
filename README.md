@@ -1,9 +1,9 @@
 # ApiRestClient
 
 **ApiRestClient is a simple Lib to talk with API Rest.**
-
+<p>
 This project was created to communicate with API CustoJusto.pt, by security reasons some data was omited.
-The user is free to use and make changes to communicate with other API.
+The user is free to use and make changes to communicate with other API.</p>
 
   - Use Httpful Rest Client Lib (http://phphttpclient.com/)
   - Use most popular HTTP methods (GET/POST/UPDATE/DELETE)
