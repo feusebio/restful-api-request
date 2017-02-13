@@ -1,4 +1,5 @@
-[![Github Releases (by Asset)](https://img.shields.io/github/downloads/atom/atom/latest/PHP.svg?style=plastic)]()
+[![PHP](https://img.shields.io/pypi/phpversions/PHP.svg?style=plastic)]()
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?style=plastic)]()
 # ApiRestClient
 
 **ApiRestClient is a simple Lib to talk with API Rest.**
