@@ -1,5 +1,3 @@
-[![DEV Version](https://poser.pugx.org/phpunit/phpunit/version)](https://packagist.org/packages/phpunit/phpunit)
-[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?style=plastic)]()
 # ApiRestClient
 
 **ApiRestClient is a simple Lib to talk with API Rest.**
