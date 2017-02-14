@@ -2,6 +2,8 @@
     "name": "feusebio/restful-api-request",
     "description": "ApiRestClient is a simple Lib to talk with an API Rest",
     "license": "MIT",
+    "keywords": ["http", "curl", "rest", "restful", "api", "requests","client api"],
+    "version": "0.5",
     "require": {
         "php": "^5.3.3",
         "nategood/httpful": "0.2.20"
