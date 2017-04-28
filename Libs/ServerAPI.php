@@ -22,7 +22,7 @@ class CustojustoAPI {
    
    static private function _initParams(){
        self::$BaseUrl    = "https://apidev.custojusto.pt/v0";
-       self::$Token      = 'K9qxONFmQJXXgx1vIyjc';
+       self::$Token      = 'XXXXXXXXxxxXxx';
        self::$HeaderAuth = 'Token token='.self::$Token;
    }
    /**
